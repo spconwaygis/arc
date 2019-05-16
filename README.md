@@ -30,5 +30,5 @@ arcmap_patch_button_implementation:
   
 	load_error_patch_from_timer - Imports only the error patches associated with the tiles checked out in the QSI production timer - removes previous TIF group and loads all rasters into a new gourp. - Dependant on lyr group file.
   
-Please see button.pdf for graphical use of scripts.
+Please see SPC_button.pdf for graphical use of scripts.
   
