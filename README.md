@@ -21,13 +21,13 @@ arcmap_full_button_implementation:
   
 	ps_button - Traverses attribute field structure of tile layout to get path associated with selected shapefile and opens it in  Photoshop
   
-	load_from_timer - Imports tiles that have been checked out in the QSI production timer into ArcMap - removes previous TIF group and loads all rasters into a new gourp.
+	load_from_timer - Imports tiles that have been checked out in the QSI production timer into ArcMap - removes previous TIF group and loads all rasters into a new gourp. - Dependant on lyr group file.
   
 
 arcmap_patch_button_implementation:
 
 	error_patch_ps - Traverses attribute field structure of tile layout and patch layout to get path associated with selected shapefile and opens all associated patch tiles in Photoshop
   
-	load_error_patch_from_timer - Imports only the error patches associated with the tiles checked out in the QSI production timer - removes previous TIF group and loads all rasters into a new gourp.
+	load_error_patch_from_timer - Imports only the error patches associated with the tiles checked out in the QSI production timer - removes previous TIF group and loads all rasters into a new gourp. - Dependant on lyr group file.
   
   
