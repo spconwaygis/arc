@@ -10,6 +10,7 @@ class ButtonClass9(object):
         sourceLayer = arcpy.mapping.Layer(r"P:\Projects\__ArcMap_Master_GDB_LYR\CIR.lyr")
         mxd = arcpy.mapping.MapDocument("Current")
         df = arcpy.mapping.ListDataFrames(mxd,"*")[0]
+        targetGroupLayer = arcpy.mapping.ListLayers(mxd, "TIF_Group", df)[0]
 
         text_file = open("C:/timer_tiles/tile_list.txt", "r")
         lines = text_file.readlines()
@@ -21,6 +22,9 @@ class ButtonClass9(object):
           arcpy.mapping.UpdateLayer(df,newlayer,sourceLayer, symbology_only = True)
           arcpy.mapping.AddLayer(df, newlayer,"Bottom")
           del newlayer
+        
+        ext = targetGroupLayer.getExtent()
+        df.extent=ext
 
         arcpy.RefreshActiveView()
         arcpy.RefreshTOC()
